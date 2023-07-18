@@ -3,7 +3,7 @@ Define java enums that uses the kabu station API independent of the swagger.
 
 ## Requirements
 
-Building the WebSocket application requires:
+Building the API client library requires:
 1. Java 1.7+
 2. Maven
 
