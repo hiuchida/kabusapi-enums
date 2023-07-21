@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.stock;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -26,6 +27,16 @@ public class MarginTradeTypeCodeTest {
 		assertEquals(MarginTradeTypeCode.制度信用, MarginTradeTypeCode.valueOf(1));
 		assertEquals(MarginTradeTypeCode.一般信用_長期, MarginTradeTypeCode.valueOf(2));
 		assertEquals(MarginTradeTypeCode.一般信用_デイトレ, MarginTradeTypeCode.valueOf(3));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			MarginTradeTypeCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

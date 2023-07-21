@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.commons;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -56,6 +57,16 @@ public class SecurityTypeCodeTest {
 		assertEquals(SecurityTypeCode.TOPIX_CORE30, SecurityTypeCode.valueOf(171));
 		assertEquals(SecurityTypeCode.日経平均225ミニ先物, SecurityTypeCode.valueOf(901));
 		assertEquals(SecurityTypeCode.TOPIXミニ先物, SecurityTypeCode.valueOf(907));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			SecurityTypeCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

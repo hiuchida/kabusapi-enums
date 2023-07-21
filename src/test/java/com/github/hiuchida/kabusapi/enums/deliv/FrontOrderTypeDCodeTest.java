@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.deliv;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -31,6 +32,16 @@ public class FrontOrderTypeDCodeTest {
 		assertEquals(FrontOrderTypeDCode.引指_派生, FrontOrderTypeDCode.valueOf(28));
 		assertEquals(FrontOrderTypeDCode.逆指値, FrontOrderTypeDCode.valueOf(30));
 		assertEquals(FrontOrderTypeDCode.成行, FrontOrderTypeDCode.valueOf(120));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			FrontOrderTypeDCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

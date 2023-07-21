@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.commons;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -22,6 +23,16 @@ public class UnderOverCodeTest {
 	public void valueOfTest() {
 		assertEquals(UnderOverCode.以下, UnderOverCode.valueOf(1));
 		assertEquals(UnderOverCode.以上, UnderOverCode.valueOf(2));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			UnderOverCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

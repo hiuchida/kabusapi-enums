@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.stock;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -26,6 +27,16 @@ public class DelivTypeCodeTest {
 		assertEquals(DelivTypeCode.指定なし, DelivTypeCode.valueOf(0));
 		assertEquals(DelivTypeCode.自動振替, DelivTypeCode.valueOf(1));
 		assertEquals(DelivTypeCode.お預り金, DelivTypeCode.valueOf(2));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			DelivTypeCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

@@ -26,6 +26,16 @@ public class SideCodeTest {
 	}
 
 	@Test
+	public void valueOfTest2() {
+		try {
+			SideCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
+	}
+
+	@Test
 	public void valueOfCodeTest() {
 		assertEquals(null, SideCode.valueOfCode(null));
 		assertEquals(SideCode.売, SideCode.valueOfCode("1"));

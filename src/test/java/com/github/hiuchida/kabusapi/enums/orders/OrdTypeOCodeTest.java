@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.orders;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -38,6 +39,16 @@ public class OrdTypeOCodeTest {
 		assertEquals(OrdTypeOCode.不成, OrdTypeOCode.valueOf(4));
 		assertEquals(OrdTypeOCode.対当指値, OrdTypeOCode.valueOf(5));
 		assertEquals(OrdTypeOCode.IOC, OrdTypeOCode.valueOf(6));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			OrdTypeOCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

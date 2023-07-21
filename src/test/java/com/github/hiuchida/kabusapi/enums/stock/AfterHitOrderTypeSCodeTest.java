@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.stock;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -25,6 +26,16 @@ public class AfterHitOrderTypeSCodeTest {
 		assertEquals(AfterHitOrderTypeSCode.成行, AfterHitOrderTypeSCode.valueOf(1));
 		assertEquals(AfterHitOrderTypeSCode.指値, AfterHitOrderTypeSCode.valueOf(2));
 		assertEquals(AfterHitOrderTypeSCode.不成, AfterHitOrderTypeSCode.valueOf(3));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			AfterHitOrderTypeSCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.stock;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -28,6 +29,16 @@ public class ExchangeSCodeTest {
 		assertEquals(ExchangeSCode.名証, ExchangeSCode.valueOf(3));
 		assertEquals(ExchangeSCode.福証, ExchangeSCode.valueOf(5));
 		assertEquals(ExchangeSCode.札証, ExchangeSCode.valueOf(6));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			ExchangeSCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

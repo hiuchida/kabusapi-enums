@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.commons;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -40,6 +41,16 @@ public class ClosePositionOrderCodeTest {
 		assertEquals(ClosePositionOrderCode.損益_高い順_日付_新しい順, ClosePositionOrderCode.valueOf(5));
 		assertEquals(ClosePositionOrderCode.損益_低い順_日付_古い順, ClosePositionOrderCode.valueOf(6));
 		assertEquals(ClosePositionOrderCode.損益_低い順_日付_新しい順, ClosePositionOrderCode.valueOf(7));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			ClosePositionOrderCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

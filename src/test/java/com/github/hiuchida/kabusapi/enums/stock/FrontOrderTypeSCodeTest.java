@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.stock;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -61,6 +62,16 @@ public class FrontOrderTypeSCodeTest {
 		assertEquals(FrontOrderTypeSCode.不成_後場, FrontOrderTypeSCode.valueOf(26));
 		assertEquals(FrontOrderTypeSCode.IOC指値, FrontOrderTypeSCode.valueOf(27));
 		assertEquals(FrontOrderTypeSCode.逆指値, FrontOrderTypeSCode.valueOf(30));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			FrontOrderTypeSCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

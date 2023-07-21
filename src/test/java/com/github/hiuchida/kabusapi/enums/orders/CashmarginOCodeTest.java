@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.orders;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -23,6 +24,16 @@ public class CashmarginOCodeTest {
 		assertEquals(null, CashmarginOCode.valueOf((Integer) null));
 		assertEquals(CashmarginOCode.新規, CashmarginOCode.valueOf(2));
 		assertEquals(CashmarginOCode.返済, CashmarginOCode.valueOf(3));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			CashmarginOCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

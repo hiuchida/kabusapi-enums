@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.orders;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -32,6 +33,16 @@ public class StateOCodeTest {
 		assertEquals(StateOCode.処理済, StateOCode.valueOf(3));
 		assertEquals(StateOCode.訂正取消送信中, StateOCode.valueOf(4));
 		assertEquals(StateOCode.終了, StateOCode.valueOf(5));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			StateOCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

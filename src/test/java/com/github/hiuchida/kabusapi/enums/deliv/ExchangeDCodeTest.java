@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.deliv;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -25,6 +26,16 @@ public class ExchangeDCodeTest {
 		assertEquals(ExchangeDCode.日通し, ExchangeDCode.valueOf(2));
 		assertEquals(ExchangeDCode.日中, ExchangeDCode.valueOf(23));
 		assertEquals(ExchangeDCode.夜間, ExchangeDCode.valueOf(24));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			ExchangeDCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

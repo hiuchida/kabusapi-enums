@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.stock;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -26,6 +27,16 @@ public class AccountTypeCodeTest {
 		assertEquals(AccountTypeCode.一般, AccountTypeCode.valueOf(2));
 		assertEquals(AccountTypeCode.特定, AccountTypeCode.valueOf(4));
 		assertEquals(AccountTypeCode.法人, AccountTypeCode.valueOf(12));
+	}
+
+	@Test
+	public void valueOfTest2() {
+		try {
+			AccountTypeCode.valueOf(-1);
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }
