@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.commons;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -29,6 +30,16 @@ public class SideCodeTest {
 		assertEquals(null, SideCode.valueOfCode(null));
 		assertEquals(SideCode.売, SideCode.valueOfCode("1"));
 		assertEquals(SideCode.買, SideCode.valueOfCode("2"));
+	}
+
+	@Test
+	public void valueOfCodeTest2() {
+		try {
+			SideCode.valueOfCode("XXX");
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

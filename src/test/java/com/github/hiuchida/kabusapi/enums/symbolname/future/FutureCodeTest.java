@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.symbolname.future;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -21,7 +22,7 @@ public class FutureCodeTest {
 	}
 
 	@Test
-	public void valueOfTest() {
+	public void valueOfCodeTest() {
 		assertEquals(FutureCode.日経平均先物, FutureCode.valueOfCode("NK225"));
 		assertEquals(FutureCode.日経225mini先物, FutureCode.valueOfCode("NK225mini"));
 		assertEquals(FutureCode.TOPIX先物, FutureCode.valueOfCode("TOPIX"));
@@ -32,6 +33,16 @@ public class FutureCodeTest {
 		assertEquals(FutureCode.日経平均VI先物, FutureCode.valueOfCode("VI"));
 		assertEquals(FutureCode.TOPIXCore30先物, FutureCode.valueOfCode("Core30"));
 		assertEquals(FutureCode.東証REIT指数先物, FutureCode.valueOfCode("REIT"));
+	}
+
+	@Test
+	public void valueOfCodeTest2() {
+		try {
+			FutureCode.valueOfCode("XXX");
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }

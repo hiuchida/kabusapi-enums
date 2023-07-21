@@ -1,6 +1,7 @@
 package com.github.hiuchida.kabusapi.enums.board;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -23,7 +24,7 @@ public class SignCodeTest {
 	}
 
 	@Test
-	public void valueOfTest() {
+	public void valueOfCodeTest() {
 		assertEquals(null, SignCode.valueOfCode(null));
 		assertEquals(SignCode.事象なし, SignCode.valueOfCode("0000"));
 		assertEquals(SignCode.一般気配, SignCode.valueOfCode("0101"));
@@ -37,6 +38,16 @@ public class SignCodeTest {
 		assertEquals(SignCode.連続約定気配, SignCode.valueOfCode("0118"));
 		assertEquals(SignCode.停止前の連続約定気配, SignCode.valueOfCode("0119"));
 		assertEquals(SignCode.買い上がり売り下がり中, SignCode.valueOfCode("0120"));
+	}
+
+	@Test
+	public void valueOfCodeTest2() {
+		try {
+			SignCode.valueOfCode("XXX");
+			fail("must throw IllegalArgumentException.");
+		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+		}
 	}
 
 }
