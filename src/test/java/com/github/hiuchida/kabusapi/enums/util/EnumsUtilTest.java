@@ -5,6 +5,7 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
+import com.github.hiuchida.kabusapi.enums.commons.ExchangeCode;
 import com.github.hiuchida.kabusapi.enums.commons.ProductCode;
 import com.github.hiuchida.kabusapi.enums.commons.SideCode;
 import com.github.hiuchida.kabusapi.enums.orders.CashmarginOCode;
@@ -13,6 +14,17 @@ import com.github.hiuchida.kabusapi.enums.symbolname.future.FutureCode;
 import com.github.hiuchida.kabusapi.enums.symbolname.option.PutOrCallCode;
 
 public class EnumsUtilTest {
+
+	@Test
+	public void intValueExchangeCodeTest() {
+		ExchangeCode exchange = ExchangeCode.東証;
+		Integer a1 = EnumsUtil.intValue(exchange);
+		assertEquals(exchange.intValue(), (int) a1);
+
+		exchange = null;
+		Integer a2 = EnumsUtil.intValue(exchange);
+		assertNull(a2);
+	}
 
 	@Test
 	public void toStringCashmarginOCodeTest() {

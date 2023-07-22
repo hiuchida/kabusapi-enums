@@ -1,5 +1,6 @@
 package com.github.hiuchida.kabusapi.enums.util;
 
+import com.github.hiuchida.kabusapi.enums.commons.ExchangeCode;
 import com.github.hiuchida.kabusapi.enums.commons.ProductCode;
 import com.github.hiuchida.kabusapi.enums.commons.SideCode;
 import com.github.hiuchida.kabusapi.enums.orders.CashmarginOCode;
@@ -8,6 +9,10 @@ import com.github.hiuchida.kabusapi.enums.symbolname.future.FutureCode;
 import com.github.hiuchida.kabusapi.enums.symbolname.option.PutOrCallCode;
 
 public class EnumsUtil {
+
+	public static Integer intValue(ExchangeCode exchange) {
+		return exchange != null ? exchange.intValue() : null;
+	}
 
 	public static String toString(CashmarginOCode cashmargin) {
 		return (cashmargin != null) ? cashmargin.toString() : null;
