@@ -6,6 +6,7 @@ import com.github.hiuchida.kabusapi.enums.commons.SideCode;
 import com.github.hiuchida.kabusapi.enums.orders.CashmarginOCode;
 import com.github.hiuchida.kabusapi.enums.orders.StateOCode;
 import com.github.hiuchida.kabusapi.enums.symbolname.future.FutureCode;
+import com.github.hiuchida.kabusapi.enums.symbolname.option.OptionCode;
 import com.github.hiuchida.kabusapi.enums.symbolname.option.PutOrCallCode;
 
 public class EnumsUtil {
@@ -20,6 +21,10 @@ public class EnumsUtil {
 
 	public static String toString(FutureCode future) {
 		return (future != null) ? future.toString() : null;
+	}
+
+	public static String toString(OptionCode option) {
+		return (option != null) ? option.toString() : null;
 	}
 
 	public static String toString(ProductCode product) {

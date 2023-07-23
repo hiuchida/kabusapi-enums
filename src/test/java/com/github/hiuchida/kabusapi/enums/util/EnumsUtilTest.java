@@ -11,6 +11,7 @@ import com.github.hiuchida.kabusapi.enums.commons.SideCode;
 import com.github.hiuchida.kabusapi.enums.orders.CashmarginOCode;
 import com.github.hiuchida.kabusapi.enums.orders.StateOCode;
 import com.github.hiuchida.kabusapi.enums.symbolname.future.FutureCode;
+import com.github.hiuchida.kabusapi.enums.symbolname.option.OptionCode;
 import com.github.hiuchida.kabusapi.enums.symbolname.option.PutOrCallCode;
 
 public class EnumsUtilTest {
@@ -45,6 +46,17 @@ public class EnumsUtilTest {
 
 		futureCode = null;
 		String s2 = EnumsUtil.toString(futureCode);
+		assertNull(s2);
+	}
+
+	@Test
+	public void toStringOptionCodeTest() {
+		OptionCode optionCode = OptionCode.日経225オプション;
+		String s1 = EnumsUtil.toString(optionCode);
+		assertEquals(optionCode.toString(), s1);
+
+		optionCode = null;
+		String s2 = EnumsUtil.toString(optionCode);
 		assertNull(s2);
 	}
 
