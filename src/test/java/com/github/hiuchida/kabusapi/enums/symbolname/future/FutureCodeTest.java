@@ -19,6 +19,7 @@ public class FutureCodeTest {
 		assertEquals("VI", FutureCode.日経平均VI先物.toString());
 		assertEquals("Core30", FutureCode.TOPIXCore30先物.toString());
 		assertEquals("REIT", FutureCode.東証REIT指数先物.toString());
+		assertEquals("NK225micro", FutureCode.日経225マイクロ先物.toString());
 	}
 
 	@Test
@@ -33,6 +34,7 @@ public class FutureCodeTest {
 		assertEquals(FutureCode.日経平均VI先物, FutureCode.valueOfCode("VI"));
 		assertEquals(FutureCode.TOPIXCore30先物, FutureCode.valueOfCode("Core30"));
 		assertEquals(FutureCode.東証REIT指数先物, FutureCode.valueOfCode("REIT"));
+		assertEquals(FutureCode.日経225マイクロ先物, FutureCode.valueOfCode("NK225micro"));
 	}
 
 	@Test
