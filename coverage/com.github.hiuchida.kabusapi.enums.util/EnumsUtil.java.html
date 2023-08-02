@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EnumsUtil.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kabusapi-enums</a> &gt; <a href="index.source.html" class="el_package">com.github.hiuchida.kabusapi.enums.util</a> &gt; <span class="el_source">EnumsUtil.java</span></div><h1>EnumsUtil.java</h1><pre class="source lang-java linenums">package com.github.hiuchida.kabusapi.enums.util;
+
+import com.github.hiuchida.kabusapi.enums.commons.ExchangeCode;
+import com.github.hiuchida.kabusapi.enums.commons.ProductCode;
+import com.github.hiuchida.kabusapi.enums.commons.SideCode;
+import com.github.hiuchida.kabusapi.enums.orders.CashmarginOCode;
+import com.github.hiuchida.kabusapi.enums.orders.StateOCode;
+import com.github.hiuchida.kabusapi.enums.symbolname.future.FutureCode;
+import com.github.hiuchida.kabusapi.enums.symbolname.option.OptionCode;
+import com.github.hiuchida.kabusapi.enums.symbolname.option.PutOrCallCode;
+
+public class EnumsUtil {
+
+	public static Integer intValue(ExchangeCode exchange) {
+<span class="fc bfc" id="L15" title="All 2 branches covered.">		return exchange != null ? exchange.intValue() : null;</span>
+	}
+
+	public static String toString(CashmarginOCode cashmargin) {
+<span class="fc bfc" id="L19" title="All 2 branches covered.">		return (cashmargin != null) ? cashmargin.toString() : null;</span>
+	}
+
+	public static String toString(FutureCode future) {
+<span class="fc bfc" id="L23" title="All 2 branches covered.">		return (future != null) ? future.toString() : null;</span>
+	}
+
+	public static String toString(OptionCode option) {
+<span class="fc bfc" id="L27" title="All 2 branches covered.">		return (option != null) ? option.toString() : null;</span>
+	}
+
+	public static String toString(ProductCode product) {
+<span class="fc bfc" id="L31" title="All 2 branches covered.">		return (product != null) ? product.toString() : null;</span>
+	}
+
+	public static String toString(PutOrCallCode putOrCall) {
+<span class="fc bfc" id="L35" title="All 2 branches covered.">		return (putOrCall != null) ? putOrCall.toString() : null;</span>
+	}
+
+	public static String toString(SideCode side) {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">		return (side != null) ? side.toString() : null;</span>
+	}
+
+	public static String toString(StateOCode state) {
+<span class="fc bfc" id="L43" title="All 2 branches covered.">		return (state != null) ? state.toString() : null;</span>
+	}
+
+	private EnumsUtil() {
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

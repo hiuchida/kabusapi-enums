@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FutureCode.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kabusapi-enums</a> &gt; <a href="index.source.html" class="el_package">com.github.hiuchida.kabusapi.enums.symbolname.future</a> &gt; <span class="el_source">FutureCode.java</span></div><h1>FutureCode.java</h1><pre class="source lang-java linenums">package com.github.hiuchida.kabusapi.enums.symbolname.future;
+
+/**
+ * 先物コード。
+ */
+<span class="fc" id="L6">public enum FutureCode {</span>
+<span class="fc" id="L7">	日経平均先物(&quot;NK225&quot;), 日経225mini先物(&quot;NK225mini&quot;), TOPIX先物(&quot;TOPIX&quot;), ミニTOPIX先物(&quot;TOPIXmini&quot;), 東証マザーズ先物(&quot;MOTHERS&quot;),</span>
+<span class="fc" id="L8">	JPX日経400先物(&quot;JPX400&quot;), NYダウ先物(&quot;DOW&quot;), 日経平均VI先物(&quot;VI&quot;), TOPIXCore30先物(&quot;Core30&quot;), 東証REIT指数先物(&quot;REIT&quot;),</span>
+<span class="fc" id="L9">	日経225マイクロ先物(&quot;NK225micro&quot;);</span>
+
+	private String code;
+
+<span class="fc" id="L13">	private FutureCode(String code) {</span>
+<span class="fc" id="L14">		this.code = code;</span>
+<span class="fc" id="L15">	}</span>
+
+	@Override
+	public String toString() {
+<span class="fc" id="L19">		return code;</span>
+	}
+
+	public static FutureCode valueOfCode(String code) {
+<span class="fc bfc" id="L23" title="All 2 branches covered.">		for (FutureCode e : values()) {</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">			if (e.code.equals(code)) {</span>
+<span class="fc" id="L25">				return e;</span>
+			}
+		}
+<span class="fc" id="L28">		throw new IllegalArgumentException(&quot;No enum constant code=&quot; + code);</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

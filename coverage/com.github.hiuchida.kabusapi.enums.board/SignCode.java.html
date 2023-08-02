@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SignCode.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">kabusapi-enums</a> &gt; <a href="index.source.html" class="el_package">com.github.hiuchida.kabusapi.enums.board</a> &gt; <span class="el_source">SignCode.java</span></div><h1>SignCode.java</h1><pre class="source lang-java linenums">package com.github.hiuchida.kabusapi.enums.board;
+
+/**
+ * 気配フラグコード（最良売気配フラグ／最良買気配フラグ）。
+ */
+<span class="fc" id="L6">public enum SignCode {</span>
+<span class="fc" id="L7">	事象なし(&quot;0000&quot;), 一般気配(&quot;0101&quot;), 特別気配(&quot;0102&quot;), 注意気配(&quot;0103&quot;), 寄前気配(&quot;0107&quot;), 停止前特別気配(&quot;0108&quot;), 引け後気配(&quot;0109&quot;),</span>
+<span class="fc" id="L8">	寄前気配約定成立ポイントなし(&quot;0116&quot;), 寄前気配約定成立ポイントあり(&quot;0117&quot;), 連続約定気配(&quot;0118&quot;), 停止前の連続約定気配(&quot;0119&quot;), 買い上がり売り下がり中(&quot;0120&quot;);</span>
+
+	private String code;
+
+<span class="fc" id="L12">	private SignCode(String code) {</span>
+<span class="fc" id="L13">		this.code = code;</span>
+<span class="fc" id="L14">	}</span>
+
+	@Override
+	public String toString() {
+<span class="fc" id="L18">		return code;</span>
+	}
+
+	public static SignCode valueOfCode(String code) {
+<span class="fc bfc" id="L22" title="All 2 branches covered.">		if (code == null) {</span>
+<span class="fc" id="L23">			return null;</span>
+		}
+<span class="fc bfc" id="L25" title="All 2 branches covered.">		for (SignCode e : values()) {</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">			if (e.code.equals(code)) {</span>
+<span class="fc" id="L27">				return e;</span>
+			}
+		}
+<span class="fc" id="L30">		throw new IllegalArgumentException(&quot;No enum constant code=&quot; + code);</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
