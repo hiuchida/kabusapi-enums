@@ -5,7 +5,7 @@
   <artifactId>kabusapi-enums</artifactId>
   <packaging>jar</packaging>
   <name>kabusapi-enums</name>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <url>https://github.com/hiuchida/kabusapi-enums</url>
   <description>kabusapi-enums</description>
   <prerequisites>
