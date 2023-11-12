@@ -17,7 +17,7 @@ public class SecurityTypeCodeTest {
 		assertEquals(121, SecurityTypeCode.JPX400先物.intValue());
 		assertEquals(144, SecurityTypeCode.NYダウ.intValue());
 		assertEquals(145, SecurityTypeCode.日経平均VI.intValue());
-		assertEquals(154, SecurityTypeCode.東証マザーズ指数先物.intValue());
+		assertEquals(154, SecurityTypeCode.グロース250先物.intValue());
 		assertEquals(155, SecurityTypeCode.TOPIX_REIT.intValue());
 		assertEquals(171, SecurityTypeCode.TOPIX_CORE30.intValue());
 		assertEquals(901, SecurityTypeCode.日経平均225ミニ先物.intValue());
@@ -34,7 +34,7 @@ public class SecurityTypeCodeTest {
 		assertEquals("121", SecurityTypeCode.JPX400先物.toString());
 		assertEquals("144", SecurityTypeCode.NYダウ.toString());
 		assertEquals("145", SecurityTypeCode.日経平均VI.toString());
-		assertEquals("154", SecurityTypeCode.東証マザーズ指数先物.toString());
+		assertEquals("154", SecurityTypeCode.グロース250先物.toString());
 		assertEquals("155", SecurityTypeCode.TOPIX_REIT.toString());
 		assertEquals("171", SecurityTypeCode.TOPIX_CORE30.toString());
 		assertEquals("901", SecurityTypeCode.日経平均225ミニ先物.toString());
@@ -52,7 +52,7 @@ public class SecurityTypeCodeTest {
 		assertEquals(SecurityTypeCode.JPX400先物, SecurityTypeCode.valueOf(121));
 		assertEquals(SecurityTypeCode.NYダウ, SecurityTypeCode.valueOf(144));
 		assertEquals(SecurityTypeCode.日経平均VI, SecurityTypeCode.valueOf(145));
-		assertEquals(SecurityTypeCode.東証マザーズ指数先物, SecurityTypeCode.valueOf(154));
+		assertEquals(SecurityTypeCode.グロース250先物, SecurityTypeCode.valueOf(154));
 		assertEquals(SecurityTypeCode.TOPIX_REIT, SecurityTypeCode.valueOf(155));
 		assertEquals(SecurityTypeCode.TOPIX_CORE30, SecurityTypeCode.valueOf(171));
 		assertEquals(SecurityTypeCode.日経平均225ミニ先物, SecurityTypeCode.valueOf(901));
