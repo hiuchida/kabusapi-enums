@@ -11,12 +11,14 @@ public class DelivTypeCodeTest {
 	public void intValueTest() {
 		assertEquals(0, DelivTypeCode.指定なし.intValue());
 		assertEquals(2, DelivTypeCode.お預り金.intValue());
+		assertEquals(3, DelivTypeCode.auマネーコネクト.intValue());
 	}
 
 	@Test
 	public void toStringTest() {
 		assertEquals("0", DelivTypeCode.指定なし.toString());
 		assertEquals("2", DelivTypeCode.お預り金.toString());
+		assertEquals("3", DelivTypeCode.auマネーコネクト.toString());
 	}
 
 	@Test
@@ -24,6 +26,7 @@ public class DelivTypeCodeTest {
 		assertEquals(null, DelivTypeCode.valueOf((Integer) null));
 		assertEquals(DelivTypeCode.指定なし, DelivTypeCode.valueOf(0));
 		assertEquals(DelivTypeCode.お預り金, DelivTypeCode.valueOf(2));
+		assertEquals(DelivTypeCode.auマネーコネクト, DelivTypeCode.valueOf(3));
 	}
 
 	@Test
