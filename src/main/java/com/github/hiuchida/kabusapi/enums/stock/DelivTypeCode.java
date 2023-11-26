@@ -4,7 +4,7 @@ package com.github.hiuchida.kabusapi.enums.stock;
  * 受渡区分。
  */
 public enum DelivTypeCode {
-	指定なし(0), 自動振替(1), お預り金(2);
+	指定なし(0), お預り金(2);
 
 	private int id;
 
