@@ -5,7 +5,7 @@ Define java enums that uses the kabu station API independent of the swagger.
 
 Building the API client library requires:
 1. Java 1.7+
-2. Maven
+2. Maven 3.8.x+
 
 ## Installation
 
